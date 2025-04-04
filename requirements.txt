@@ -1,2 +1,1 @@
-flask
-pandas
+pip freeze > requirements.txt
