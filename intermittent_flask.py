@@ -190,7 +190,8 @@ def index():
             'Probe': [],
             "Mixed Target":[],
             "Distractor Mix with Target":[],
-            "Target Mix with Distractor": []
+            "Target Mix with Distractor": [],
+            "mixture_numbers":2
             
         }
 
@@ -201,7 +202,7 @@ def index():
             if type_ in data:
                 data[type_].append(name)
             data[f"{name}_weight"] = int(weight)
-
+        print (data)
         randomized_data, reinforce = randomize(data)
         randomized_data['reinforce'] = reinforce
         df = pd.DataFrame(randomized_data)
